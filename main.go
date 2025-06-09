@@ -7,11 +7,9 @@ import (
 
 func searchPerson(users []string, name string) []string {
 	var result []string
-	var y int = 0
 	for x := range users {
 		if strings.Contains(users[x], name) {
 			result = append(result, users[x])
-			y++
 		}
 	}
 	return result
