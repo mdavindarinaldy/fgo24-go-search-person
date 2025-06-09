@@ -1,19 +1,9 @@
 package main
 
 import (
+	"fgo24-go-search-person/utils"
 	"fmt"
-	"strings"
 )
-
-func searchPerson(users []string, name string) []string {
-	var result []string
-	for x := range users {
-		if strings.Contains(users[x], name) {
-			result = append(result, users[x])
-		}
-	}
-	return result
-}
 
 func main() {
 	users := []string{
@@ -28,7 +18,7 @@ func main() {
 		"Glena Reichert",
 		"Clementina DuBuque",
 	}
-	fmt.Println(searchPerson(users, "Clemen"))
-	fmt.Println(searchPerson(users, "clemen"))
-	fmt.Println(searchPerson(users, "G"))
+	fmt.Println(utils.SearchPerson(users, "Clemen"))
+	fmt.Println(utils.SearchPerson(users, "clemen"))
+	fmt.Println(utils.SearchPerson(users, "G"))
 }
